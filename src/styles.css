@@ -1,0 +1,82 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/MDadn8DQ_3oT6kvnUq_2r_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+html, body, main {
+    color: #555459;
+    font-family: Lato, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    background: white;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    z-index: 25;
+}
+
+.slide-hey-slack {
+    background: transparent;
+}
+
+.slide-hey-slack h1 {
+    bottom: 0;
+    font-size: 70px;
+    height: 70px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: transform 0.1s;
+}
+.slide-hey-slack p {
+    bottom: 0;
+    font-size: 35px;
+    height: 35px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+
+.slide-hey-slack .dot {
+    border-radius: 1000px;
+    position: fixed;
+}
+
+.slide-lot-in-common {
+    background: white;
+}
+
+.slide-lot-in-common h1 {
+    margin: 100px 0;
+}
+.slide-lot-in-common .venn {
+    height: 40%;
+    margin: 0 auto;
+    position: relative;
+    width: 40%;
+    z-index: 1;
+}
+.slide-lot-in-common .venn:before,
+.slide-lot-in-common .venn:after {
+    background: red;
+    content: "";
+    display: block;
+    position: relative;
+    z-index: 2;
+}
