@@ -20,7 +20,7 @@ class Dot {
 
         var elem = document.createElement('i');
         elem.className = 'dot';
-        elem.style.filter = elem.style.webkitFilter = 'blur(' + (this.depth * 2) + 'px)';
+        elem.style.filter = elem.style.webkitFilter = 'blur(' + (this.depth * 1.5) + 'px)';
         elem.style.backgroundColor = this.color;
         elem.style.height = this.radius * 2 + 'px';
         elem.style.width = this.radius * 2 + 'px';
@@ -33,7 +33,7 @@ class Dot {
 
     tick(delta, ratio) {
         this.age += delta / 1000;
-        this.energy = 1 / this.age + 0.5;
+        this.energy = 1 / this.age + 0.25;
 
         this.x += Math.cos(this.direction) * this.energy;
         this.y += Math.sin(this.direction) * this.energy;

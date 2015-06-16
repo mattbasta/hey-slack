@@ -59,24 +59,30 @@ html, body, main {
 }
 
 .slide-lot-in-common {
-    background: white;
+    background: #fafafa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .slide-lot-in-common h1 {
     margin: 100px 0;
 }
-.slide-lot-in-common .venn {
-    height: 40%;
-    margin: 0 auto;
-    position: relative;
-    width: 40%;
-    z-index: 1;
+.slide-lot-in-common .half {
+    display: flex;
+    height: 60%;
 }
-.slide-lot-in-common .venn:before,
-.slide-lot-in-common .venn:after {
-    background: red;
-    content: "";
-    display: block;
-    position: relative;
-    z-index: 2;
+.slide-lot-in-common .half > * {
+    flex: 1 0;
+}
+
+
+.slide-werent-thrilled blockquote {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Consolas, Courier, monospace;
+    line-height: 24px;
+    margin: auto;
+    padding: 0 1em;
+    text-align: left;
+    width: 55%;
 }
