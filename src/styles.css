@@ -9,13 +9,22 @@
     src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/MDadn8DQ_3oT6kvnUq_2r_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Lato Black'), local('Lato-Black'), url(http://fonts.gstatic.com/s/lato/v11/lEjOv129Q3iN1tuqWOeRBgLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 
 html, body, main {
     color: #555459;
     font-family: Lato, sans-serif;
+    -webkit-font-smoothing: antialiased;
     height: 100%;
     margin: 0;
     padding: 0;
+    text-rendering: optimizelegibility;
 }
 
 .slide {
@@ -32,7 +41,7 @@ html, body, main {
 }
 
 .slide-hey-slack h1 {
-    bottom: 0;
+    bottom: 100px;
     font-size: 70px;
     height: 70px;
     left: 0;
@@ -71,10 +80,67 @@ html, body, main {
     height: 60%;
 }
 .slide-lot-in-common .half > * {
+    font-size: 1.2em;
+    font-weight: bold;
     flex: 1 0;
 }
 
+.slide-lot-in-common .love-code:before {
+    background: url(../img/code.png) repeat-y 15%;
+    background-attachment: fixed;
+    border: 20px solid #ddd;
+    border-radius: 240px;
+    box-shadow: 2px 2px 0 #ccc, 4px 4px 0 #ccc, 6px 6px 0 #ccc;
+    content: "";
+    display: block;
+    height: 300px;
+    margin: 0 auto 30px;
+    width: 300px;
+}
 
+.slide-love-your-work {
+    background: url(../img/groddle_meadow.jpg) no-repeat center bottom;
+    background-size: cover;
+}
+.slide-love-your-work p {
+    bottom: 0;
+    color: #fff;
+    font-size: 3em;
+    height: 3em;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-shadow: 0 0 10px #000;
+    top: 0;
+}
+.slide-love-your-work img {
+    bottom: calc(5% + 170px);
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    transform: scale(0.5);
+}
+.slide-love-your-work canvas {
+    bottom: 5%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+}
+
+.slide-werent-thrilled {
+    background: #303E4D;
+    padding: 0 15px;
+}
+.slide-werent-thrilled > p {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 4em;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
 .slide-werent-thrilled blockquote {
     background: #fff;
     border: 1px solid #ddd;
@@ -82,7 +148,377 @@ html, body, main {
     font-family: Consolas, Courier, monospace;
     line-height: 24px;
     margin: auto;
+    max-width: 700px;
+    min-width: 55%;
     padding: 0 1em;
     text-align: left;
-    width: 55%;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.slide-love {
+    background: #4d394b;
+    color: #fff;
+}
+.slide-love h2 {
+    font-size: 3em;
+    margin: 100px;
+}
+.slide-love .love-you-guys {
+    line-height: 120px;
+    margin-bottom: 70px;
+}
+.slide-love .love-you-guys > * {
+    margin: 0 50px;
+    vertical-align: middle;
+}
+.slide-love .love-you-guys > img {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.slide-love .love-you-guys > span {
+    font-size: 50px;
+}
+.slide-love .slack-logo {
+    position: relative;
+    margin: 0 120px;
+}
+.slide-love .slack-logo:before,
+.slide-love .slack-logo:after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+.slide-love .slack-logo:before {
+    background: hsla(337, 84%, 48%, 0.75);
+    border-radius: 20px;
+    box-shadow: 70px 0 0 hsla(190, 61%, 65%, 0.75);
+    height: 125px;
+    left: 0;
+    top: 0;
+    transform: rotate(-20deg) translate(-25px, -65px);
+    transform-origin: 62.5px 62.5px;
+    width: 20px;
+}
+.slide-love .slack-logo:after {
+    background: hsla(160, 50%, 48%, 0.75);
+    border-radius: 20px;
+    box-shadow: 0 70px 0 hsla(41, 82%, 52%, 0.75);
+    height: 20px;
+    left: 0;
+    top: 0;
+    transform: rotate(-20deg) translate(-45px, -45px);
+    transform-origin: 62.5px 62.5px;
+    width: 125px;
+}
+
+.slide-love p {
+    font-size: 2em;
+}
+.slide-love p.if-not {
+    opacity: 0.3;
+}
+
+.slide-contact {
+    padding-left: 220px;
+}
+.slide-contact .body {
+    bottom: 0;
+    left: 220px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+}
+.slide-contact > h3 {
+    color: #555459;
+    font-size: 24px;
+    margin: 10px 0;
+    padding: 0 18px;
+    position: absolute;
+    top: 0;
+}
+.slide-contact > h3 span {
+    color: #9e9ea6;
+    font-weight: 400;
+    transition: color 0.1s ease-out;
+}
+.slide-contact > h3:hover span {
+    color: #555459;
+}
+.slide-contact > h3 em {
+    color: #93cc93;
+}
+.slide-contact hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 18px;
+    text-align: center;
+}
+.slide-contact hr:after {
+    background: #fff;
+    content: attr(data-label);
+    display: inline-block;
+    font-weight: 900;
+    margin: 0 auto;
+    padding: 0 1em;
+    position: relative;
+    top: -0.65em;
+}
+.slide-contact .message {
+    font-size: 15px;
+    padding: 0 20px 0 64px;
+}
+.slide-contact .message img {
+    border-radius: 3px;
+    float: left;
+    height: 36px;
+    margin-left: -46px;
+    opacity: 0.8;
+    transition: opacity 0.1s ease-out;
+    width: 36px;
+}
+.slide-contact .message:hover img {
+    opacity: 1
+}
+.slide-contact .message strong {
+    display: block;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+.slide-contact .message strong:after {
+    color: #babbbf;
+    content: attr(data-timestamp);
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 12px;
+}
+.slide-contact .message p {
+    margin: 0 0 5px;
+}
+.slide-contact .input {
+    margin: 21px 20px;
+    position: relative;
+}
+.slide-contact .input button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: linear-gradient(to bottom, #fff 0%, #efefef 100%);
+    border: 0;
+    border-right: 2px solid #E0E0E0;
+    color: #999;
+    font-size: 30px;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    top: 2px;
+    width: 40px;
+}
+.slide-contact .input textarea {
+    border: 2px solid #E0E0E0;
+    border-radius: 3px;
+    color: #3d3c40;
+    display: block;
+    font-size: 15px;
+    height: 42px;
+    line-height: 1.2em;
+    padding: 9px 9px 9px 50px;
+    resize: none;
+    width: 100%;
+}
+.slide-contact .sidebar {
+    background: #4D5250;
+    color: #fff;
+    float: left;
+    height: 100%;
+    margin-left: -220px;
+    padding: 40px 0;
+    text-align: left;
+    width: 220px;
+}
+.slide-contact .sidebar h3 {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 20px;
+    opacity: 0.6;
+    text-transform: uppercase;
+}
+.slide-contact .sidebar h3:hover {
+    opacity: 1;
+}
+.slide-contact .sidebar ul {
+    margin: 5px 0 30px;
+    padding: 0;
+}
+.slide-contact .sidebar-list {
+    list-style: none;
+}
+.slide-contact .sidebar-list li {
+    line-height: 24px;
+    list-style: none;
+    margin-right: 15px;
+    opacity: 0.6;
+    padding: 0 0 0 35px;
+}
+.slide-contact .sidebar-list li:hover {
+    background: #434745;
+    border-radius: 0 5px 5px 0;
+}
+.slide-contact .sidebar-list li.active {
+    background: #D39B46;
+    border-radius: 0 5px 5px 0;
+    opacity: 1;
+}
+.slide-contact .sidebar-channels li:before {
+    content: "#";
+    display: inline-block;
+    margin-left: -15px;
+    opacity: 0.5;
+    width: 15px;
+}
+.slide-contact .sidebar-dms li:before {
+    color: #fff;
+    content: "•";
+    display: inline-block;
+    margin-left: -15px;
+    opacity: 1;
+    width: 15px;
+}
+.slide-contact .sidebar-dms li.slackbot:before {
+    color: #94E864;
+    content: "❤";
+    font-size: 0.8em;
+}
+
+.hide,
+.mobile-only {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .mobile-only {
+        display: block;
+    }
+
+    .clip-mobile > * {
+        display: none;
+    }
+
+    .jagged-mobile {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        position: relative;
+    }
+    .jagged-mobile:after {
+        background: linear-gradient(-45deg, #fff 16px, transparent 0), linear-gradient(45deg, #fff 16px, transparent 0);
+        background-position: left-bottom;
+        background-repeat: repeat-x;
+        background-size: 32px 32px;
+        bottom: -32px;
+        content: "";
+        display: block;
+        height: 32px;
+        left: -1px;
+        position: absolute;
+        right: -1px;
+        transform: scaleY(-1);
+    }
+
+    .slide-werent-thrilled > p {
+        margin: 1em 0;
+    }
+    .slide-werent-thrilled > blockquote {
+        font-size: 0.9em;
+    }
+
+    .slide-love h2 {
+        font-size: 2em;
+        margin: 40px;
+    }
+
+    .slide-contact {
+        padding: 0;
+    }
+    .slide-contact .sidebar {
+        display: none;
+    }
+    .slide-contact .body {
+        left: 0;
+    }
+
+    .slide-contact > h3 {
+        background: #303E4D;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+        color: #fff;
+        left: 0;
+        line-height: 45px;
+        margin: 0;
+        right: 0;
+        text-align: left;
+        top: 0;
+    }
+    .slide-contact > h3:before {
+        color: #fff;
+        content: "←";
+        display: inline-block;
+    }
+    .slide-contact > h3 > span {
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0 5px;
+    }
+    .slide-contact > h3 > em {
+        display: none;
+    }
+
+    .slide-contact .input {
+        margin: 20px 0 0 0;
+    }
+    .slide-contact .input button {
+        display: none;
+    }
+    .slide-contact .input textarea {
+        border: 0;
+        border-top: 1px solid #ddd;
+        border-radius: 0;
+        line-height: 24px;
+        padding-left: 9px;
+    }
+    .slide-contact .input span {
+        bottom: 0;
+        height: 1.2em;
+        left: 9px;
+        line-height: 1.2em;
+        margin: auto;
+        opacity: 0.6;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        vertical-align: middle;
+    }
+
+    .slide-contact .input textarea.filled + span {
+        display: none;
+    }
+}
+
+
+.emoji-1f498 {
+    background: url(../img/emoji/1f498.svg) no-repeat center center;
+    display: inline-block;
+    height: 1em;
+    vertical-align: text-top;
+    width: 1em;
+}
+.emoji-1f363 {
+    background: url(../img/emoji/1f363.svg) no-repeat center center;
+    display: inline-block;
+    height: 1em;
+    vertical-align: text-top;
+    width: 1em;
+}
+.emoji-2615 {
+    background: url(../img/emoji/2615.svg) no-repeat center center;
+    display: inline-block;
+    height: 1em;
+    vertical-align: text-top;
+    width: 1em;
 }

@@ -42,6 +42,8 @@ function render() {
             currentImg = 1;
         } else {
             pauseTimeout = setTimeout(() => {
+                frame = 0;
+                currentImg = 0;
                 pauseTimeout = null;
                 startTick = Date.now();
                 render();
@@ -66,10 +68,12 @@ function render() {
     requestAnimationFrame(render);
 }
 
-canvas.addEventListener('click', () => {
+function giggle() {
     shouldDoHappy = true;
     clearTimeout(pauseTimeout);
     render();
-});
+}
+canvas.addEventListener('click', giggle);
+canvas.addEventListener('touchend', giggle);
 
 Promise.all(images.map(i => new Promise(r => (i.img.onload = r)))).then(render);

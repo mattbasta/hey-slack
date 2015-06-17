@@ -12,15 +12,16 @@ class Dot {
         this.x = Math.random() * (window.innerWidth / 3) - window.innerWidth / 6;
         this.y = Math.random() * (window.innerWidth / 3) - window.innerWidth / 6;
         this.age = 0;
-        this.radius = Math.random() * maxDotSize + minDotSize | 0;
         this.depth = Math.random() * depthCount | 0;
-        this.color = 'hsl(' + (Math.random() * 255) + ', 90%, 70%)';
+        this.radius = Math.random() * maxDotSize + minDotSize | 0;
+        this.color = 'hsl(' + (Math.random() * 255) + ', 80%, 70%)';
         this.direction = Math.random() * 2 * Math.PI;
         this.energy = 1;
 
         var elem = document.createElement('i');
         elem.className = 'dot';
         elem.style.filter = elem.style.webkitFilter = 'blur(' + (this.depth * 1.5) + 'px)';
+        elem.style.opacity = 1 / (this.depth + 1);
         elem.style.backgroundColor = this.color;
         elem.style.height = this.radius * 2 + 'px';
         elem.style.width = this.radius * 2 + 'px';
@@ -63,6 +64,11 @@ for (var i = 0; i < dotCount; i++) {
 
 let lastTick = Date.now();
 function render() {
+    if (window.scrollY > window.innerHeight) {
+        requestAnimationFrame(render);
+        return;
+    }
+
     var now = Date.now();
     var delta = now - lastTick;
     var ratio = delta / (1000 / 60);
