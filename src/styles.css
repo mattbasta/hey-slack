@@ -171,7 +171,7 @@ html, body, main {
     position: absolute;
     right: 0;
     top: 0;
-    transform: rotate(-20deg);
+    transform: rotate(-110deg);
     width: 300px;
     z-index: 9;
 }
@@ -527,7 +527,7 @@ html, body, main {
 
 
     .slide-lot-in-common > h1 {
-        margin: 30px 0;
+        margin: 15px 0;
     }
     .slide-lot-in-common .half {
         display: block;
@@ -543,6 +543,7 @@ html, body, main {
     .slide-lot-in-common .better-work:before,
     .slide-lot-in-common .better-work:after {
         height: 150px;
+        margin-bottom: 10px;
         width: 150px;
     }
     .slide-lot-in-common .love-code:before,
@@ -550,11 +551,13 @@ html, body, main {
         border-width: 10px;
     }
 
-    .slide-werent-thrilled > p {
+    .slide-werent-thrilled > p:first-child {
+        font-size: 1.5em;
         margin: 1em 0;
     }
     .slide-werent-thrilled > blockquote {
         font-size: 0.9em;
+        text-shadow: none;
     }
 
     .slide-love h2 {
