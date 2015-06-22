@@ -73,7 +73,7 @@ html, body, main {
 }
 
 .slide-lot-in-common h1 {
-    margin: 100px 0;
+    margin: 6% 0;
 }
 .slide-lot-in-common .half {
     display: flex;
@@ -84,6 +84,9 @@ html, body, main {
     font-size: 1.2em;
     font-weight: bold;
     flex: 1 0;
+}
+.slide-lot-in-common .half a {
+    color: #222;
 }
 
 .slide-lot-in-common .love-code:before {
@@ -535,9 +538,6 @@ html, body, main {
         font-size: 1.2em;
         font-weight: bold;
         flex: 0 0;
-    }
-    .slide-lot-in-common .half > p {
-
     }
     .slide-lot-in-common .love-code:before,
     .slide-lot-in-common .better-work:before,
