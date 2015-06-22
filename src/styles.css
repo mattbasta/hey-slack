@@ -229,6 +229,9 @@ html, body, main {
     margin: 5%;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
+.slide-werent-thrilled > p a {
+    color: #fff;
+}
 .slide-werent-thrilled blockquote {
     background: #fff;
     border: 1px solid #ddd;
