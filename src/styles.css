@@ -98,6 +98,93 @@ html, body, main {
     width: 300px;
 }
 
+.slide-lot-in-common .better-work {
+    position: relative;
+}
+.slide-lot-in-common .better-work:after {
+    background-image:
+        repeating-linear-gradient(
+            transparent,
+            transparent 25px,
+            hsla(160, 50%, 48%, 0.45) 25px,
+            hsla(160, 50%, 48%, 0.45) 26.5px,
+            transparent 26.5px,
+            transparent 31.5px,
+            hsla(160, 50%, 48%, 0.45) 31.5px,
+            hsla(160, 50%, 48%, 0.45) 33px,
+            transparent 33px,
+            transparent 58px,
+            hsla(160, 50%, 48%, 0.3) 58px,
+            hsla(160, 50%, 48%, 0.3) 83px,
+            hsla(40, 81%, 52%, 0.43) 83px,
+            hsla(40, 81%, 52%, 0.43) 84.5px,
+            hsla(190, 60%, 65%, 0.2) 84.5px,
+            hsla(190, 60%, 65%, 0.2) 89.5px,
+            hsla(337, 81%, 48%, 0.65) 89.5px,
+            hsla(337, 81%, 48%, 0.65) 91px,
+            hsla(190, 60%, 65%, 0.5) 91px,
+            hsla(190, 60%, 65%, 0.5) 116px,
+            transparent 116px),
+        repeating-linear-gradient(
+            270deg,
+            transparent,
+            transparent 25px,
+            hsla(160, 50%, 48%, 0.45) 25px,
+            hsla(160, 50%, 48%, 0.45) 26.5px,
+            transparent 26.5px,
+            transparent 31.5px,
+            hsla(160, 50%, 48%, 0.45) 31.5px,
+            hsla(160, 50%, 48%, 0.45) 33px,
+            transparent 33px,
+            transparent 58px,
+            hsla(190, 60%, 65%, 0.5) 58px,
+            hsla(190, 60%, 65%, 0.5) 83px,
+            hsla(337, 81%, 48%, 0.65) 83px,
+            hsla(337, 81%, 48%, 0.65) 84.5px,
+            hsla(190, 60%, 65%, 0.5) 84.5px,
+            hsla(190, 60%, 65%, 0.5) 89.5px,
+            hsla(40, 81%, 52%, 0.43) 89.5px,
+            hsla(40, 81%, 52%, 0.43) 91px,
+            hsla(190, 60%, 65%, 0.5) 91px,
+            hsla(190, 60%, 65%, 0.5) 116px,
+            transparent 116px),
+        repeating-linear-gradient(
+            125deg,
+            transparent,
+            transparent 2px,
+            hsla(160, 50%, 48%, 0.45) 2px,
+            hsla(160, 50%, 48%, 0.45) 3px,
+            transparent 3px,
+            transparent 5px,
+            hsla(160, 50%, 48%, 0.45) 5px);
+    background-attachment: fixed;
+    border-radius: 240px;
+    content: "";
+    display: block;
+    height: 300px;
+    left: 0;
+    margin: 0 auto 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotate(-20deg);
+    width: 300px;
+    z-index: 9;
+}
+.slide-lot-in-common .better-work:before {
+    background: url(../img/thatd-be-great.png) no-repeat center center/cover;
+    border: 20px solid #ddd;
+    border-radius: 240px;
+    box-shadow: 2px 2px 0 #ccc, 4px 4px 0 #ccc, 6px 6px 0 #ccc;
+    content: "";
+    display: block;
+    height: 300px;
+    margin: 0 auto 30px;
+    position: relative;
+    width: 300px;
+    z-index: 10;
+}
+
 .slide-love-your-work {
     background: url(../img/groddle_meadow.jpg) no-repeat center bottom;
     background-size: cover;
@@ -134,11 +221,11 @@ html, body, main {
     background: #303E4D;
     padding: 0 15px;
 }
-.slide-werent-thrilled > p {
+.slide-werent-thrilled > p:first-child {
     color: #fff;
     font-size: 2em;
     font-weight: bold;
-    margin: 4em;
+    margin: 5%;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 .slide-werent-thrilled blockquote {
@@ -153,6 +240,11 @@ html, body, main {
     padding: 0 1em;
     text-align: left;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+.slide-werent-thrilled > p:last-child {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0.5em;
 }
 
 .slide-love {
@@ -188,25 +280,25 @@ html, body, main {
     display: block;
     position: absolute;
 }
-.slide-love .slack-logo:before {
+.slide-love .slack-logo:before { /* Vertical */
     background: hsla(337, 84%, 48%, 0.75);
-    border-radius: 20px;
-    box-shadow: 70px 0 0 hsla(190, 61%, 65%, 0.75);
+    border-radius: 25px;
+    box-shadow: 52.5px 0 0 hsla(190, 61%, 65%, 0.75);
     height: 125px;
     left: 0;
     top: 0;
-    transform: rotate(-20deg) translate(-25px, -65px);
+    transform: rotate(-20deg) translate(-20px, -62.5px);
     transform-origin: 62.5px 62.5px;
-    width: 20px;
+    width: 25px;
 }
-.slide-love .slack-logo:after {
+.slide-love .slack-logo:after { /* Horizontal */
     background: hsla(160, 50%, 48%, 0.75);
-    border-radius: 20px;
-    box-shadow: 0 70px 0 hsla(41, 82%, 52%, 0.75);
-    height: 20px;
+    border-radius: 25px;
+    box-shadow: 0 52.5px 0 hsla(41, 82%, 52%, 0.75);
+    height: 25px;
     left: 0;
     top: 0;
-    transform: rotate(-20deg) translate(-45px, -45px);
+    transform: rotate(-20deg) translate(-45px, -40px);
     transform-origin: 62.5px 62.5px;
     width: 125px;
 }
@@ -395,6 +487,9 @@ html, body, main {
 }
 
 @media screen and (max-width: 700px) {
+    .hide-mobile {
+        display: none;
+    }
     .mobile-only {
         display: block;
     }
@@ -423,6 +518,33 @@ html, body, main {
         transform: scaleY(-1);
     }
 
+
+    .slide-lot-in-common > h1 {
+        margin: 30px 0;
+    }
+    .slide-lot-in-common .half {
+        display: block;
+        height: 60%;
+    }
+    .slide-lot-in-common .half > * {
+        font-size: 1.2em;
+        font-weight: bold;
+        flex: 0 0;
+    }
+    .slide-lot-in-common .half > p {
+
+    }
+    .slide-lot-in-common .love-code:before,
+    .slide-lot-in-common .better-work:before,
+    .slide-lot-in-common .better-work:after {
+        height: 150px;
+        width: 150px;
+    }
+    .slide-lot-in-common .love-code:before,
+    .slide-lot-in-common .better-work:before {
+        border-width: 10px;
+    }
+
     .slide-werent-thrilled > p {
         margin: 1em 0;
     }
@@ -433,6 +555,39 @@ html, body, main {
     .slide-love h2 {
         font-size: 2em;
         margin: 40px;
+    }
+
+    .slide-love .love-you-guys > img {
+        height: 62.5px;
+        width: 62.5px;
+    }
+    .slide-love .love-you-guys .slack-logo {
+        margin: 0 50px;
+    }
+    .slide-love .slack-logo:before { /* Vertical */
+        box-shadow: 25px 0 0 hsla(190, 61%, 65%, 0.75);
+        height: 65px;
+        left: 0;
+        top: 0;
+        transform: rotate(-20deg) translate(-12.5px, -35px);
+        transform-origin: 35px 35px;
+        width: 15px;
+    }
+    .slide-love .slack-logo:after { /* Horizontal */
+        box-shadow: 0 25px 0 hsla(41, 82%, 52%, 0.75);
+        height: 15px;
+        left: 0;
+        top: 0;
+        transform: rotate(-20deg) translate(-25px, -22.5px);
+        transform-origin: 35px 35px;
+        width: 65px;
+    }
+    .slide-love .love-you-guys > * {
+        margin: 0 30px;
+    }
+    .slide-love p {
+        font-size: 1.5em;
+        margin: 5%;
     }
 
     .slide-contact {
@@ -510,6 +665,13 @@ html, body, main {
 }
 .emoji-1f363 {
     background: url(../img/emoji/1f363.svg) no-repeat center center;
+    display: inline-block;
+    height: 1em;
+    vertical-align: text-top;
+    width: 1em;
+}
+.emoji-1f630 {
+    background: url(../img/emoji/1f630.svg) no-repeat center center;
     display: inline-block;
     height: 1em;
     vertical-align: text-top;
