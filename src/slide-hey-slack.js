@@ -50,7 +50,7 @@ class Dot {
             y - this.radius < window.innerHeight / 2;
         var newDisplay = isVisible ? 'block' : 'none';
         if (isVisible || newDisplay !== this.elem.style.display) {
-            this.elem.style.transform = 'translate(' + (x - this.radius | 0) + 'px, ' + (y - this.radius | 0) + 'px)';
+            this.elem.style.transform = this.elem.style.webkitTransform = 'translate(' + (x - this.radius | 0) + 'px, ' + (y - this.radius | 0) + 'px)';
         }
         this.elem.style.display = newDisplay;
     }
